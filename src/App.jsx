@@ -7,8 +7,8 @@ import Preloader from './components/Preloader.jsx'
 import banner2 from '../banner2.webp'
 import banner3 from '../banner3.jpg'
 import banner4 from '../banner4.avif'
-import banner5 from '../../banner 5.jpg'
-import banner6 from '../../banner6.jpg'
+import banner5 from './assets/banner 5.jpg'
+import banner6 from './assets/banner6.jpg'
 import './style.css'
 import './work.css'
 import './storytelling.css'
@@ -55,7 +55,7 @@ function Filmography({limit,variant}){
 function InteractiveServices({home=false}){
   const [active,setActive]=useState(0)
   const reducedMotion=useReducedMotion()
-  const [number,title,summary,tags]=services[active]
+  const [number,title,,tags]=services[active]
   const detail=serviceDetails[active]
   const serviceImageIndexes=[8,9,10,8]
   return <Reveal className="story-reveal"><section className={`interactive-services${home?' interactive-services--home':''}`}>
